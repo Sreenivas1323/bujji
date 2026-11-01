@@ -1,0 +1,47 @@
+{
+  "name": "bujji",
+  "version": "0.1.0",
+  "description": "Your social space in one daily brief: messages, friends, your analytics and trends, plus content ideas. So you can create instead of scroll.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "bujji": "src/cli.ts"
+  },
+  "files": [
+    "src",
+    "bujji.config.example.yaml",
+    ".env.example"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sreenivas1323/bujji.git"
+  },
+  "keywords": [
+    "social-media",
+    "digest",
+    "creator",
+    "claude",
+    "beeper",
+    "bluesky",
+    "daily-brief"
+  ],
+  "engines": {
+    "bun": ">=1.2"
+  },
+  "scripts": {
+    "collect": "bun src/cli.ts collect",
+    "run": "bun src/cli.ts run",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
+    "@beeper/desktop-api": "^6.0.0",
+    "fast-xml-parser": "^5.11.2",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,44 @@
+# Bujji config. Secrets (API keys, tokens) go in .env, never here.
+
+you:
+  name: Sai
+  niche: "AI tools, indie building, Telugu tech audience"
+  voice: "casual, practical, a little funny; short sentences"
+  goals: "grow on YouTube and Bluesky; post 5x a week"
+
+lookbackHours: 24
+
+llm:
+  model: claude-opus-5-5   # any Claude model id
+  effort: medium           # low | medium | high | xhigh | max
+
+sources:
+  # Every chat app you've connected to Beeper Desktop: WhatsApp, Instagram DMs,
+  # Telegram, Signal, LinkedIn, Discord, Slack, iMessage... Needs BEEPER_ACCESS_TOKEN.
+  beeper:
+    enabled: false
+    includeMuted: false
+    skipChats: []          # chat names that must never leave your machine, e.g. ["Family"]
+
+  # Public API, no login.
+  bluesky:
+    me: you.bsky.social
+    friends: []
+
+  youtube:
+    myChannelId: ""        # your channel (needs YOUTUBE_API_KEY for view counts)
+    watch: []              # channel ids of creators you follow (no key needed)
+
+  reddit:
+    subreddits: [SideProject, ChatGPT]
+
+  # Any RSS/Atom feed. RSSHub (docs.rsshub.app) turns most public profiles into feeds.
+  rss:
+    - name: Hacker News
+      url: https://hnrss.org/frontpage?points=150
+      section: trends      # trends | friends
+
+outputs:
+  dir: ./digests
+  # telegram:
+  #   chatId: "123456789"  # message your bot, then open api.telegram.org/bot<token>/getUpdates
