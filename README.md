@@ -6,6 +6,8 @@ Bujji reads your messages, your friends' posts, your own post analytics and what
 
 > Named after Bujji, Bhairava's AI sidekick in *Kalki 2898 AD*: small, loyal, always watching your back.
 
+> 🗳️ **The name isn't final.** Bujji, Kattappa or Eega? [Vote in the name poll](https://github.com/Sreenivas1323/bujji/issues/1) (open until November 16, 2026).
+
 An example brief (made-up data):
 
 ```
